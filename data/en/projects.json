@@ -1,0 +1,47 @@
+{
+  "header": "Projects",
+  "projects": [
+    {
+      "image": "/projects/temp.png",
+      "employer": {
+        "pre": "for",
+        "name": "Strona Agency"
+      },
+      "name": "Project #1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis suscipit libero, eu placerat ligula. Ut non sodales enim. Ut malesuada fringilla semper. Sed tempor tortor et justo feugiat, in pellentesque augue consectetur. Integer purus lectus, ultricies eu convallis laoreet, placerat et purus.",
+      "technologies": ["Next.js", "Tailwind.css", "Node.js", "Strapi"],
+      "links": {
+        "github": "https://google.com",
+        "external": "https://google.com"
+      }
+    },
+    {
+      "image": "/projects/temp.png",
+      "employer": {
+        "pre": "for",
+        "name": "Strona Agency"
+      },
+      "name": "Project #1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis suscipit libero, eu placerat ligula. Ut non sodales enim. Ut malesuada fringilla semper. Sed tempor tortor et justo feugiat, in pellentesque augue consectetur. Integer purus lectus, ultricies eu convallis laoreet, placerat et purus.",
+      "technologies": ["Next.js", "Tailwind.css", "Node.js", "Strapi"],
+      "links": {
+        "github": "https://google.com",
+        "external": "https://google.com"
+      }
+    },
+    {
+      "image": "/projects/temp.png",
+      "employer": {
+        "pre": "for",
+        "name": "Strona Agency"
+      },
+      "name": "Project #1",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis suscipit libero, eu placerat ligula. Ut non sodales enim. Ut malesuada fringilla semper. Sed tempor tortor et justo feugiat, in pellentesque augue consectetur. Integer purus lectus, ultricies eu convallis laoreet, placerat et purus.",
+      "technologies": ["Next.js", "Tailwind.css", "Node.js", "Strapi"],
+      "links": {
+        "github": "https://google.com",
+        "external": "https://google.com"
+      }
+    }
+  ]
+}
