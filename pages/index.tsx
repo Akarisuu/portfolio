@@ -1,19 +1,25 @@
+import ContactSection from "components/home/contactSection";
 import Hero from "components/home/heroSection";
 import ProjectsSection from "components/home/projectsSection";
+import Footer from "components/shared/footer";
 import fs from "fs";
-import { heroContent, projectsContent } from "utils/types";
+import { contactContent, heroContent, projectsContent } from "utils/types";
 
 export default function Home({
   heroContent,
   projectsContent,
+  contactContent,
 }: {
   heroContent: heroContent;
   projectsContent: projectsContent;
+  contactContent: contactContent;
 }) {
   return (
     <main>
       <Hero content={heroContent} />
       <ProjectsSection content={projectsContent} />
+      <ContactSection content={contactContent} />
+      <Footer />
     </main>
   );
 }
@@ -25,14 +31,19 @@ export const getStaticProps = () => {
   const stringProjectsContent = fs
     .readFileSync(`${process.cwd()}/data/en/projects.json`)
     .toString();
+  const stringContactContent = fs
+    .readFileSync(`${process.cwd()}/data/en/contact.json`)
+    .toString();
 
   const heroContent = JSON.parse(stringHeroContent);
   const projectsContent = JSON.parse(stringProjectsContent);
+  const contactContent = JSON.parse(stringContactContent);
 
   return {
     props: {
       heroContent,
       projectsContent,
+      contactContent,
     },
   };
 };

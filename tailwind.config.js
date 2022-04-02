@@ -18,6 +18,7 @@ module.exports = {
         tertiary: "#6CD1F1",
         primaryBackground: "#34312E",
         secondaryBackground: "#403C38",
+        primaryText: "#f3f3f3",
       },
       dropShadow: {
         basic: "0 0 4px rgba(0, 0, 0, .25)",

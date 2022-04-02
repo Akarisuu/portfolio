@@ -1,0 +1,28 @@
+{
+  "header": "Contact",
+  "form": {
+    "name": "Name",
+    "email": "E-mail",
+    "topic": "Topic",
+    "message": "Message",
+    "submit": "Send"
+  },
+  "others": {
+    "header": "Or reach out by yourself!",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis suscipit libero, eu placerat ligula.",
+    "links": {
+      "github": {
+        "href": "https://google.com/",
+        "text": "Akarisuu"
+      },
+      "linkedin": {
+        "href": "https://google.com/",
+        "text": "Paweł Majewski"
+      },
+      "email": {
+        "href": "https://google.com/",
+        "text": "pawelmajewski@hotmail.com"
+      }
+    }
+  }
+}

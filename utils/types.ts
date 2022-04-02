@@ -24,3 +24,28 @@ export interface projectsContent {
     }
   ];
 }
+
+interface link {
+  href: string;
+  text: string;
+}
+
+export interface contactContent {
+  header: string;
+  form: {
+    name: string;
+    email: string;
+    topic: string;
+    message: string;
+    submit: string;
+  };
+  others: {
+    header: string;
+    description: string;
+    links: {
+      github?: link;
+      linkedin?: link;
+      email?: link;
+    };
+  };
+}
