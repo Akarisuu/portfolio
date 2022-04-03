@@ -35,6 +35,22 @@
   .input {
     @apply bg-primaryBackground placeholder:text-[#6A6A6A] px-4 py-2 shadow-lg focus:outline-none w-full;
   }
+
+  .projectImage img {
+    @apply saturate-100;
+  }
+
+  .projectImage > *:last-child {
+    @apply opacity-0;
+  }
+
+  .iconLink path {
+    @apply transition-colors duration-300;
+  }
+
+  .iconSecondary path {
+    @apply fill-secondary;
+  }
 }
 
 html,

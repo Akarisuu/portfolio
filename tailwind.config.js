@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       padding: {
         mobile: "5%",
-        desktop: "10%",
+        desktop: "15%",
       },
       colors: {
         primary: "#FF8000",
