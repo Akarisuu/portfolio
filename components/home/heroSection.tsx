@@ -5,12 +5,16 @@ import { heroContent } from "utils/types";
 import useWindowWidth from "hooks/useWindowWidth";
 import { useEffect, useRef } from "react";
 import gsap, { Power2 } from "gsap";
+import { useRouter } from "next/router";
+import intersectRouter from "hooks/intersectRouter";
 
 export default function Hero({ content }: { content: heroContent }) {
   const headerRef = useRef<HTMLHeadingElement>(null);
   const backTextRef = useRef<HTMLSpanElement>(null);
   const descRef = useRef<HTMLParagraphElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  const router = useRouter();
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -37,7 +41,6 @@ export default function Hero({ content }: { content: heroContent }) {
     );
     if (lines) {
       Array.from(lines).forEach((el) => {
-        console.log(el);
         tl.fromTo(
           el,
           { opacity: 0 },
@@ -59,6 +62,8 @@ export default function Hero({ content }: { content: heroContent }) {
       "+=0.5"
     );
   }, []);
+
+  intersectRouter(headerRef, "/");
 
   return (
     <section className="flex flex-col relative h-[90vh] md:h-[80vh] xl:h-[90vh]">

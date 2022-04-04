@@ -51,6 +51,19 @@
   .iconSecondary path {
     @apply fill-secondary;
   }
+
+  .mediaLink,
+  .mediaLink path {
+    @apply transition-colors duration-300;
+  }
+
+  .mediaLinkToDark {
+    @apply text-secondaryBackground;
+  }
+
+  .mediaLinkToDark path {
+    @apply fill-secondaryBackground;
+  }
 }
 
 html,

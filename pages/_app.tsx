@@ -1,6 +1,8 @@
 import "../styles/globals.css";
 import Head from "next/head";
 import type { AppProps } from "next/app";
+import Footer from "components/shared/footer";
+import Navbar from "components/shared/navbar";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -23,7 +25,9 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
       </Head>
+      <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </>
   );
 }

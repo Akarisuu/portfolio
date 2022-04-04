@@ -1,7 +1,6 @@
 import ContactSection from "components/home/contactSection";
 import Hero from "components/home/heroSection";
 import ProjectsSection from "components/home/projectsSection";
-import Footer from "components/shared/footer";
 import fs from "fs";
 import { contactContent, heroContent, projectsContent } from "utils/types";
 
@@ -19,7 +18,6 @@ export default function Home({
       <Hero content={heroContent} />
       <ProjectsSection content={projectsContent} />
       <ContactSection content={contactContent} />
-      <Footer />
     </main>
   );
 }

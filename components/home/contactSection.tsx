@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { contactContent } from "utils/types";
 import ContactLines from "public/contactLines.svg";
 import Github from "public/icons/github.svg";
 import Email from "public/icons/email.svg";
 import Linkedin from "public/icons/linkedin.svg";
 import DoubleArrow from "public/icons/doubleArrow.svg";
+import axios from "config/axios";
 
 function MediaLink({
   href,
@@ -18,7 +19,10 @@ function MediaLink({
 }) {
   return (
     <Link href={href} passHref>
-      <a className="first:mt-4 mt-2 flex items-center" target="_blank">
+      <a
+        className="first:mt-4 mt-2 flex items-center transition-colors mediaLink hover:mediaLinkToDark"
+        target="_blank"
+      >
         <Icon className="w-6 h-6 mr-3" />
         <span>{text}</span>
       </a>
@@ -38,8 +42,20 @@ export default function ContactSection({
     message: "",
   });
 
+  function submitForm(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    axios
+      .post("/mailhandler", form)
+      .then((e) => console.log(e))
+      .catch((e) => console.log(e));
+  }
+
   return (
-    <section className="bg-secondaryBackground flex flex-col px-mobile pt-32 pb-24 relative xl:px-desktop xl:pb-44">
+    <section
+      className="bg-secondaryBackground flex flex-col px-mobile pt-32 pb-24 relative xl:px-desktop xl:pb-44"
+      id="contact"
+    >
       <div className="absolute left-0 bottom-0 w-[50%] translate-y-[5%] hidden xl:block after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-tr after:from-secondaryBackground/10 after:to-secondaryBackground">
         <ContactLines />
       </div>
@@ -47,7 +63,10 @@ export default function ContactSection({
         {content.header}
         <span className="text-tertiary">.</span>
       </h2>
-      <form className="grid grid-cols-1 row-auto gap-x-8 gap-y-4 mt-12 xl:grid-cols-3 z-10">
+      <form
+        className="grid grid-cols-1 row-auto gap-x-8 gap-y-4 mt-12 xl:grid-cols-3 z-10"
+        onSubmit={submitForm}
+      >
         <div className="first:mt-0 relative">
           <input
             type="text"

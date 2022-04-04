@@ -6,6 +6,7 @@ import Star from "public/star.svg";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import useWindowWidth from "hooks/useWindowWidth";
 
 function IconLink({ Icon, href }: { Icon: any; href: string }) {
   return (
@@ -23,14 +24,15 @@ export default function ProjectsSection({
   content: projectsContent;
 }) {
   const projectsWrapperRef = useRef<HTMLDivElement>(null);
+  const windowWidth = useWindowWidth();
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const fadeInObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.remove("opacity-0");
-            observer.unobserve(entry.target);
+            fadeInObserver.unobserve(entry.target);
           }
         });
       },
@@ -39,15 +41,42 @@ export default function ProjectsSection({
       }
     );
 
+    const focusObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target
+              .querySelector(".focusShade")
+              ?.classList.remove("bg-secondary");
+            entry.target
+              .querySelector(".focusSaturation")
+              ?.classList.remove("saturate-0");
+            return;
+          }
+          entry.target
+            .querySelector(".focusShade")
+            ?.classList.add("bg-secondary");
+          entry.target
+            .querySelector(".focusSaturation")
+            ?.classList.add("saturate-0");
+        });
+      },
+      {
+        threshold: windowWidth >= 768 ? 1 : 0.5,
+        rootMargin: "-10% 0px",
+      }
+    );
+
     if (projectsWrapperRef.current) {
       Array.from(projectsWrapperRef.current?.children).forEach((el) => {
-        observer.observe(el);
+        fadeInObserver.observe(el);
+        focusObserver.observe(el);
       });
     }
   }, []);
 
   return (
-    <section className=" bg-secondaryBackground pt-9 md:pt-20">
+    <section className=" bg-secondaryBackground pt-9 md:pt-20" id="projects">
       <h2 className="font-bold text-3xl px-mobile md:text-4xl xl:px-desktop xl:text-5xl">
         {content.header}
         <span className="text-secondary">.</span>
@@ -62,9 +91,9 @@ export default function ProjectsSection({
                   alt={name}
                   layout="fill"
                   objectFit="cover"
-                  className="saturate-0 transition-all duration-300"
+                  className="saturate-0 transition-all duration-300 focusSaturation"
                 />
-                <span className="absolute w-full h-full bg-secondary opacity-30 top-0 left-0 transition-all duration-300"></span>
+                <span className="absolute w-full h-full bg-secondary opacity-30 top-0 left-0 transition-all duration-300 focusShade"></span>
               </div>
               <div className="mt-6 flex flex-col md:w-1/2 md:relative md:right-0 md:items-end xl:w-[50%]">
                 <h4 className="text-xl font-bold text-secondary md:text-2xl">
