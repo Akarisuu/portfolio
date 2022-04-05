@@ -38,9 +38,9 @@ export default function Navbar() {
       circle,
       { width: 0, height: 0, marginLeft: 0 },
       {
-        height: "300vh",
-        width: "300vh",
-        marginLeft: "-150vh",
+        height: window.innerWidth < 1280 ? "300vh" : "200vw",
+        width: window.innerWidth < 1280 ? "300vh" : "200vw",
+        marginLeft: window.innerWidth < 1280 ? "-150vh" : "100vw",
         duration: 1,
       }
     );

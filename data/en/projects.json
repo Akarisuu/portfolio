@@ -2,45 +2,81 @@
   "header": "Projects",
   "projects": [
     {
-      "image": "/projects/temp.jpg",
+      "image": "/projects/artmov.png",
       "employer": {
         "pre": "for",
         "name": "Strona Agency"
       },
-      "name": "Project #1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis suscipit libero, eu placerat ligula. Ut non sodales enim. Ut malesuada fringilla semper. Sed tempor tortor et justo feugiat, in pellentesque augue consectetur. Integer purus lectus, ultricies eu convallis laoreet, placerat et purus.",
-      "technologies": ["Next.js", "Tailwind.css", "Node.js", "Strapi"],
+      "name": "artMov",
+      "description": "Smaller project created for client from creative industry, more specifically marketing and video making. Website is oriented mostly around media, foremost about changing visible background video depending on states (chosen project). Service setup at OVHCloud.",
+      "technologies": [
+        "Next.js",
+        "Tailwind.css",
+        "Node.js",
+        "Strapi",
+        "OVHCloud"
+      ],
       "links": {
-        "github": "https://google.com",
-        "external": "https://google.com"
+        "external": "https://artmov.pl"
       }
     },
     {
-      "image": "/projects/temp.jpg",
+      "image": "/projects/presstito.png",
       "employer": {
         "pre": "for",
         "name": "Strona Agency"
       },
-      "name": "Project #1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis suscipit libero, eu placerat ligula. Ut non sodales enim. Ut malesuada fringilla semper. Sed tempor tortor et justo feugiat, in pellentesque augue consectetur. Integer purus lectus, ultricies eu convallis laoreet, placerat et purus.",
-      "technologies": ["Next.js", "Tailwind.css", "Node.js", "Strapi"],
+      "name": "Presstito",
+      "description": "On of our bigger projects at Strona Agency. I was responsible for hosting the app, creating whole backend (CMS, user authentiaction and management, etc) and frontend of user panel, single investition and investitions list page and shared component with latest investitions.",
+      "technologies": [
+        "Next.js",
+        "SCSS",
+        "Node.js",
+        "Nextauth",
+        "Strapi",
+        "SQLite via Bookshelf.js"
+      ],
       "links": {
-        "github": "https://google.com",
-        "external": "https://google.com"
+        "external": "https://presstito.pl"
       }
     },
     {
-      "image": "/projects/temp.jpg",
+      "image": "/projects/cinead.png",
       "employer": {
         "pre": "for",
         "name": "Strona Agency"
       },
-      "name": "Project #1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis suscipit libero, eu placerat ligula. Ut non sodales enim. Ut malesuada fringilla semper. Sed tempor tortor et justo feugiat, in pellentesque augue consectetur. Integer purus lectus, ultricies eu convallis laoreet, placerat et purus.",
-      "technologies": ["Next.js", "Tailwind.css", "Node.js", "Strapi"],
+      "name": "Cinead",
+      "description": "Similar to ArtMov project, created for client working in marketing and video making but with more simplistic style and multiple animations. Fully coded and hosted by me.",
+      "technologies": ["Next.js", "SCSS", "Node.js", "Strapi", "GSAP"],
       "links": {
-        "github": "https://google.com",
-        "external": "https://google.com"
+        "external": "https://cinead.pl"
+      }
+    },
+    {
+      "image": "/projects/pracowniaterapii.png",
+      "employer": {
+        "pre": "for",
+        "name": "Strona Agency"
+      },
+      "name": "Pracownia Terapii i Rozwoju",
+      "description": "Another small and simplistic project. I was responsible for creating blog with backend designed around it.",
+      "technologies": ["Next.js", "SCSS", "Node.js", "Strapi", "SWR"],
+      "links": {
+        "external": "https://pracowniaterapii.pl"
+      }
+    },
+    {
+      "image": "/projects/cinead.png",
+      "employer": {
+        "pre": "for",
+        "name": "Strona Agency"
+      },
+      "name": "Cinead",
+      "description": "Similar to ArtMov project, created for client working in marketing and video making but with more simplistic style and multiple animations. Fully coded and hosted by me.",
+      "technologies": ["Next.js", "SCSS", "Node.js", "Strapi", "GSAP"],
+      "links": {
+        "external": "https://cinead.pl"
       }
     }
   ]
