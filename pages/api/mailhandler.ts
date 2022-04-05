@@ -7,8 +7,6 @@ export default async function handler(
 ) {
   const data = req.body;
 
-  console.log(data);
-
   try {
     const testAccount = await nodemailer.createTestAccount();
 

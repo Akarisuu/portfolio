@@ -1,6 +1,6 @@
-import ContactSection from "components/home/contactSection";
+import ContactSection from "components/home/contact/main";
 import Hero from "components/home/heroSection";
-import ProjectsSection from "components/home/projectsSection";
+import ProjectsSection from "components/home/projects/main";
 import fs from "fs";
 import { contactContent, heroContent, projectsContent } from "utils/types";
 

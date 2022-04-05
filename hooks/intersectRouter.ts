@@ -11,9 +11,11 @@ export default function intersectRouter(
     const routerObserver = new IntersectionObserver(
       (entries) =>
         entries.forEach((entry) => {
-          if (entry.isIntersecting) router.replace("/");
+          if (entry.isIntersecting) {
+            history.replaceState({}, "", href);
+          }
         }),
-      { threshold: 1 }
+      { threshold: 1, rootMargin: "0px 0px -50%" }
     );
 
     if (ref.current) routerObserver.observe(ref.current);

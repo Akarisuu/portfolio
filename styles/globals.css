@@ -3,45 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-  /* List item custom classes */
-  .list-item-dot {
-    @apply relative pl-4 before:absolute before:top-1/2 before:left-1 before:content-[''] before:h-1 before:w-1 before:rounded-full before:bg-black before:block;
-  }
-  .list-item-slash {
-    @apply relative pl-6 
-      before:absolute before:inset-y-0 before:left-1 before:content-['//'] before:font-black before:tracking-[-4px] before:block;
-  }
-
-  /* Form custom classes */
-  p.alert-not-valid {
-    @apply text-red-600 mt-1 col-span-full;
-  }
-  .input-not-valid {
-    @apply !drop-shadow-error;
-  }
-  .form-input {
-    @apply outline-none drop-shadow-basic py-2 px-4 rounded-xl mt-1;
-  }
-  .form-label {
-    @apply text-lg font-medium mt-4 ml-2;
-  }
-  .form-select {
-    @apply outline-none drop-shadow-basic py-2 px-4 rounded-xl mt-1;
-  }
-
   .inputWrapper {
     @apply mt-3 first:mt-0;
   }
   .input {
     @apply bg-primaryBackground placeholder:text-[#6A6A6A] px-4 py-2 shadow-lg focus:outline-none w-full;
-  }
-
-  .projectImage img {
-    @apply saturate-100;
-  }
-
-  .projectImage > *:last-child {
-    @apply opacity-0;
   }
 
   .iconLink path {
@@ -63,6 +29,10 @@
 
   .mediaLinkToDark path {
     @apply fill-secondaryBackground;
+  }
+
+  .anchorRun {
+    @apply w-[300vh] h-[300vh] -ml-[150vh] !important;
   }
 }
 

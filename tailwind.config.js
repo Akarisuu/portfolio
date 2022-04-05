@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       header: "IBM Plex Sans Arabic",
+      base: "Fira Sans",
     },
     extend: {
       padding: {

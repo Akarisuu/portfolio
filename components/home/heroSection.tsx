@@ -1,11 +1,8 @@
-import LinesMobile from "public/heroLinesMobile.svg";
 import Lines from "public/heroLines.svg";
 import Arrow from "public/arrow.svg";
 import { heroContent } from "utils/types";
-import useWindowWidth from "hooks/useWindowWidth";
 import { useEffect, useRef } from "react";
 import gsap, { Power2 } from "gsap";
-import { useRouter } from "next/router";
 import intersectRouter from "hooks/intersectRouter";
 
 export default function Hero({ content }: { content: heroContent }) {
@@ -13,8 +10,6 @@ export default function Hero({ content }: { content: heroContent }) {
   const backTextRef = useRef<HTMLSpanElement>(null);
   const descRef = useRef<HTMLParagraphElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
-
-  const router = useRouter();
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -63,10 +58,13 @@ export default function Hero({ content }: { content: heroContent }) {
     );
   }, []);
 
-  intersectRouter(headerRef, "/");
+  intersectRouter(headerRef, "/#home");
 
   return (
-    <section className="flex flex-col relative h-[90vh] md:h-[80vh] xl:h-[90vh]">
+    <section
+      className="flex flex-col relative h-[90vh] md:h-[80vh] xl:h-[90vh]"
+      id="home"
+    >
       <div className="absolute top-0 right-0 after:content-[''] overflow-hidden after:absolute after:right-0 after:top-0 after:w-full after:h-full after:bg-gradient-to-tr after:from-primaryBackground after:to-primaryBackground/20">
         <Lines
           className="h-[500px] w-auto translate-x-[20%] md:h-[50vh] md:translate-x-0 xl:h-[75vh]"

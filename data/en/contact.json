@@ -5,7 +5,14 @@
     "email": "E-mail",
     "topic": "Topic",
     "message": "Message",
-    "submit": "Send"
+    "submit": {
+      "base": "Send",
+      "pending": "Pending"
+    },
+    "alert": {
+      "success": "Message has been sent!",
+      "error": "An error has occured. Please try again or contact manually."
+    }
   },
   "others": {
     "header": "Or reach out by yourself!",

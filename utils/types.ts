@@ -5,24 +5,24 @@ export interface heroContent {
   scrollHint: string;
 }
 
+export interface singleProject {
+  image: string;
+  employer: {
+    pre: string;
+    name: string;
+  };
+  name: string;
+  description: string;
+  technologies: string[];
+  links: {
+    github?: string;
+    external?: string;
+  };
+}
+
 export interface projectsContent {
   header: string;
-  projects: [
-    {
-      image: string;
-      employer: {
-        pre: string;
-        name: string;
-      };
-      name: string;
-      description: string;
-      technologies: string[];
-      links: {
-        github?: string;
-        external?: string;
-      };
-    }
-  ];
+  projects: singleProject[];
 }
 
 interface link {
@@ -37,7 +37,14 @@ export interface contactContent {
     email: string;
     topic: string;
     message: string;
-    submit: string;
+    submit: {
+      base: string;
+      pending: string;
+    };
+    alert: {
+      success: string;
+      error: string;
+    };
   };
   others: {
     header: string;
@@ -48,4 +55,10 @@ export interface contactContent {
       email?: link;
     };
   };
+}
+
+export interface alert {
+  status: null | "success" | "error";
+  message: null | string;
+  visible: boolean;
 }
