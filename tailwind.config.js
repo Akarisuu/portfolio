@@ -5,7 +5,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      header: "IBM Plex Sans Arabic",
+      header: "Poppins",
       base: "Fira Sans",
     },
     extend: {
@@ -20,10 +20,6 @@ module.exports = {
         primaryBackground: "#34312E",
         secondaryBackground: "#403C38",
         primaryText: "#f3f3f3",
-      },
-      dropShadow: {
-        basic: "0 0 4px rgba(0, 0, 0, .25)",
-        error: "0 0 4px rgb(220, 38, 38)",
       },
     },
   },

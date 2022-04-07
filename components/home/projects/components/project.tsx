@@ -6,10 +6,12 @@ import LinkIcon from "public/icons/link.svg";
 
 export default function Project({
   content,
+  pre,
   index,
   visibleId,
 }: {
   content: singleProject;
+  pre: string;
   index: number;
   visibleId: number | null;
 }) {
@@ -39,18 +41,19 @@ export default function Project({
       </div>
       <div className="mt-6 flex flex-col md:w-1/2 md:relative md:right-0 md:items-end xl:w-[50%]">
         <h4 className="text-xl font-bold text-secondary md:text-2xl">
-          <span className="text-sm font-normal text-primaryText">
-            {employer.pre}
-          </span>{" "}
-          {employer.name}
+          <span className="text-sm font-normal text-primaryText">{pre}</span>{" "}
+          {employer}
         </h4>
         <h3 className="text-xl font-bold md:text-2xl">{name}</h3>
         <p className="mt-2 px-5 py-6 rounded text-sm text-justify drop-shadow-md bg-primaryBackground md:w-[400px] md:min-w-[95%]">
           {description}
         </p>
-        <div className="flex mt-6 text-xs font-light md:text-sm">
+        <div className="flex mt-6 text-xs font-light flex-wrap md:text-sm md:justify-end">
           {technologies.map((el, i) => (
-            <span className="mr-6 last:mr-0" key={i}>
+            <span
+              className="mr-6 last:mr-0 md:mr-0 md:ml-6 md:first:ml-0"
+              key={i}
+            >
               {el}
             </span>
           ))}

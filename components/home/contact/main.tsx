@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { FormEvent, useRef, useState } from "react";
+import { useRef } from "react";
 import { contactContent } from "utils/types";
 import ContactLines from "public/contactLines.svg";
 

@@ -1,5 +1,5 @@
 import Lines from "public/heroLines.svg";
-import Arrow from "public/arrow.svg";
+import Arrow from "public/icons/arrow.svg";
 import { heroContent } from "utils/types";
 import { useEffect, useRef } from "react";
 import gsap, { Power2 } from "gsap";
@@ -79,7 +79,11 @@ export default function Hero({ content }: { content: heroContent }) {
           >
             {content.header.split("#").map((text, index) => {
               if (index % 2 === 0) return text;
-              return <span className="text-primary">{text}</span>;
+              return (
+                <span className="text-primary" key={index}>
+                  {text}
+                </span>
+              );
             })}
           </h1>
           <span

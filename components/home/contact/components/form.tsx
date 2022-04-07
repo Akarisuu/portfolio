@@ -2,7 +2,7 @@ import { alert, contactContent } from "utils/types";
 import { useState, FormEvent, useRef } from "react";
 import axios from "config/axios";
 import DoubleArrow from "public/icons/doubleArrow.svg";
-import Loading from "public/loading.svg";
+import Loading from "public/icons/loading.svg";
 import ContactCard from "./card";
 import Alert from "./alert";
 
@@ -60,8 +60,7 @@ export default function ContactForm({
         setIsSending(false);
         autoCloseAlert();
       })
-      .catch((err) => {
-        console.log("this is error", err);
+      .catch(() => {
         setAlert({
           status: "error",
           message: content.alert.error,

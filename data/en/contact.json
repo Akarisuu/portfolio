@@ -16,18 +16,18 @@
   },
   "others": {
     "header": "Or reach out by yourself!",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis suscipit libero, eu placerat ligula.",
+    "description": "If you are willing to contact me about some project or just want to say hi, feel free to reach me out on one of medias listed below!",
     "links": {
       "github": {
-        "href": "https://google.com/",
+        "href": "https://github.com/Akarisuu",
         "text": "Akarisuu"
       },
       "linkedin": {
-        "href": "https://google.com/",
+        "href": "https://www.linkedin.com/in/pawe%C5%82-majewski-18b86120b",
         "text": "Paweł Majewski"
       },
       "email": {
-        "href": "https://google.com/",
+        "href": "mailto:pawelmajewski@hotmail.com",
         "text": "pawelmajewski@hotmail.com"
       }
     }

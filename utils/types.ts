@@ -7,10 +7,7 @@ export interface heroContent {
 
 export interface singleProject {
   image: string;
-  employer: {
-    pre: string;
-    name: string;
-  };
+  employer: string;
   name: string;
   description: string;
   technologies: string[];
@@ -22,6 +19,7 @@ export interface singleProject {
 
 export interface projectsContent {
   header: string;
+  pre: string;
   projects: singleProject[];
 }
 
@@ -61,4 +59,21 @@ export interface alert {
   status: null | "success" | "error";
   message: null | string;
   visible: boolean;
+}
+
+export interface navbarElement {
+  label: string;
+  href: string;
+}
+
+export interface metadata {
+  title: string;
+  description: string;
+  type: string;
+  image: string;
+}
+
+export interface globalContent {
+  metadata: metadata;
+  navbar: navbarElement[];
 }

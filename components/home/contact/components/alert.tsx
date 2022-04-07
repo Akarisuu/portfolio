@@ -1,7 +1,6 @@
 import SuccessIcon from "public/icons/success.svg";
 import ErrorIcon from "public/icons/error.svg";
 import CloseIcon from "public/icons/close.svg";
-import { Dispatch, SetStateAction } from "react";
 import { alert } from "utils/types";
 
 export default function Alert({

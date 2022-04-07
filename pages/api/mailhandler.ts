@@ -5,29 +5,27 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  if (req.method !== "POST") return res.status(400).end();
+
   const data = req.body;
 
   try {
-    const testAccount = await nodemailer.createTestAccount();
-
     const transporter = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
-      secure: false,
+      host: process.env.EMAIL_HOST,
+      port: Number(process.env.EMAIL_PORT) || undefined,
+      secure: process.env.EMAIL_SECURE === "true" || false,
       auth: {
-        user: testAccount.user,
-        pass: testAccount.pass,
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
-    const info = await transporter.sendMail({
-      from: `"${data.name}" <${data.email}>`,
-      to: `${process.env.EMAIL}`,
+    await transporter.sendMail({
+      from: `"${data.name}, ${data.email}" <${process.env.EMAIL_USER}>`,
+      to: `${process.env.EMAIL_RECIEVER}`,
       subject: `Wiadomość ze strony portfolio - "${data.topic}"`,
       text: data.message,
     });
-
-    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
 
     res.status(200).end();
   } catch (err) {

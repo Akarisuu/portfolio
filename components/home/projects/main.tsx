@@ -1,5 +1,5 @@
 import { projectsContent } from "utils/types";
-import Star from "public/star.svg";
+import Star from "public/icons/star.svg";
 import { useEffect, useRef, useState } from "react";
 import intersectRouter from "hooks/intersectRouter";
 import Project from "./components/project";
@@ -75,8 +75,10 @@ export default function ProjectsSection({
         {content.projects.map((projectContent, index) => (
           <Project
             content={projectContent}
+            pre={content.pre}
             index={index}
             visibleId={visibleId}
+            key={index}
           />
         ))}
         <div className="absolute top-0 right-0 w-full h-full flex items-end justify-end">
