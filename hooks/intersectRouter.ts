@@ -1,12 +1,9 @@
-import { useRouter } from "next/router";
 import { RefObject, useEffect } from "react";
 
 export default function intersectRouter(
   ref: RefObject<HTMLElement>,
   href: string
 ) {
-  const router = useRouter();
-
   useEffect(() => {
     const routerObserver = new IntersectionObserver(
       (entries) =>
