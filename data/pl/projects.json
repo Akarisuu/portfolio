@@ -60,7 +60,7 @@
       "description": "Kolejny mniejszy i minimalistyczny projekt. Byłem odpowiedzialny za tworzenie bloga oraz backendu, utworzonego specjalnie pod niego.",
       "technologies": ["Next.js", "SCSS", "Node.js", "Strapi", "SWR"],
       "links": {
-        "external": "https://pracowniaterapii.pl"
+        "external": "https://pracowniaterapii.com"
       }
     },
     {

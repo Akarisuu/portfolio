@@ -60,7 +60,7 @@
       "description": "Another small and simplistic project. I was responsible for creating blog with backend designed around it.",
       "technologies": ["Next.js", "SCSS", "Node.js", "Strapi", "SWR"],
       "links": {
-        "external": "https://pracowniaterapii.pl"
+        "external": "https://pracowniaterapii.com"
       }
     },
     {
