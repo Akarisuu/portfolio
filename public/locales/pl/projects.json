@@ -1,0 +1,62 @@
+{
+  "header": "Projekty",
+  "pre": "dla",
+  "projects": [
+    {
+      "image": "/projects/artmov.png",
+      "employer": "Strona Agency",
+      "name": "artMov",
+      "description": "Mniejszy projekt, wykonany dla klienta z branży kreatywnej, a dokładniej marketingowej i filmowej. Strona zorientowana jest głównie wokół mediów, przede wszystkim wokół filmów w tle, które zmieniają się na podstawie state'ów (wybranych projektów). Usługę stawiałem na OVHCloud.",
+      "technologies": ["Next.js", "Tailwind.CSS", "Node.js", "Strapi", "OVHCloud"],
+      "link": "https://artmov.pl"
+    },
+    {
+      "image": "/projects/presstito.png",
+      "employer": "Strona Agency",
+      "name": "Presstito",
+      "description": "Jeden z większych projektów wykonanych dla Strona Agency. Byłem odpowiedzialny za hostowanie aplikacji, pełny backend (CMS, zarządzenie oraz autoryzacja użytkowników, itp) oraz frontend panelu użytkownika, podstron dla inwestycji jak i pojedynczej inwestycji oraz współdzielone komponenty z ostatnimi aukcjami.",
+      "technologies": ["Next.js", "SCSS", "Node.js", "NextAuth.js", "Strapi", "SQLite via Bookshelf.js", "OVHCloud"],
+      "link": "https://presstito.pl"
+    },
+    {
+      "image": "/projects/cinead.png",
+      "employer": "Strona Agency",
+      "name": "Cinead",
+      "description": "Podobnie do projektu ArtMov, stworzony dla klienta pracującego w branży marketingowej oraz filmowej, jednakże z bardziej minimalistycznym stylem oraz naciskiem na animacje. Kodowany i hostowany w pełni przeze mnie.",
+      "technologies": ["Next.js", "SCSS", "Node.js", "Strapi", "GSAP", "OVHCloud"],
+      "link": "https://cinead.pl"
+    },
+    {
+      "image": "/projects/pracowniaterapii.png",
+      "employer": "Strona Agency",
+      "name": "Pracownia Terapii i Rozwoju",
+      "description": "Kolejny mniejszy i minimalistyczny projekt. Byłem odpowiedzialny za tworzenie bloga oraz backendu, utworzonego specjalnie pod niego.",
+      "technologies": ["Next.js", "SCSS", "Node.js", "Strapi", "SWR"],
+      "link": "https://pracowniaterapii.com"
+    },
+    {
+      "image": "/projects/prisma.png",
+      "employer": "Projekt własny",
+      "name": "Prisma Discord",
+      "description": "Mój pierwszy duży projekt, stworzony dla serwera Discord Prisma, którym zarządzam wraz z przyjaciółmi. Ideą projektu było zrobienie strony jak najminimalistyczniej, z możliwością rozszerzania jest równolegle z rozwojem serwera Discord. Posiada również pełną integrację z Discord oraz Twitch API, Discord Botem, OAuth2 oraz mailingiem.",
+      "technologies": [
+        "Next.js",
+        "SCSS",
+        "Node.js",
+        "Strapi",
+        "Discord API",
+        "Twitch API",
+        "NextAuth.js",
+        "DigitalOcean/OVHCloud"
+      ],
+      "link": "https://prismadiscord.com"
+    },
+    {
+      "image": "/projects/prismabot.png",
+      "employer": "Projekt własny",
+      "name": "Prisma Bot",
+      "description": "Discord Bot stworzony pod automatyczne zarządzanie serwerem Discord Prisma. Poza zarządzeniem, blisko współpracuje ze stroną internetową Prisma, automatycznie przesyłając najnowsze wydarzenia.",
+      "technologies": ["Node.js", "Discord API"]
+    }
+  ]
+}

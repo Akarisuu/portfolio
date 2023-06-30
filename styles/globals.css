@@ -2,40 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .inputWrapper {
-    @apply mt-3 first:mt-0;
-  }
-  .input {
-    @apply bg-primaryBackground placeholder:text-[#6A6A6A] px-4 py-2 shadow-lg focus:outline-none w-full;
-  }
-
-  .iconLink path {
-    @apply transition-colors duration-300;
-  }
-
-  .iconSecondary path {
-    @apply fill-secondary;
-  }
-
-  .mediaLink,
-  .mediaLink path {
-    @apply transition-colors duration-300;
-  }
-
-  .mediaLinkToDark {
-    @apply text-secondaryBackground;
-  }
-
-  .mediaLinkToDark path {
-    @apply fill-secondaryBackground;
-  }
-
-  .anchorRun {
-    @apply w-[300vh] h-[300vh] -ml-[150vh] !important;
-  }
-}
-
 html,
 body {
   padding: 0;
@@ -43,6 +9,7 @@ body {
   font-family: Fira Sans;
   color: #f3f3f3;
   background-color: #34312e;
+  scroll-behavior: smooth;
 }
 
 h1,

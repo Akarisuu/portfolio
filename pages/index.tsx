@@ -1,59 +1,38 @@
-import ContactSection from "components/home/contact/main";
-import Hero from "components/home/heroSection";
-import ProjectsSection from "components/home/projects/main";
-import Head from "next/head";
-import {
-  contactContent,
-  heroContent,
-  metadata,
-  projectsContent,
-} from "utils/types";
+import ContactSection from 'components/home/contact/Contact';
+import HeroSection from 'components/home/HeroSection';
+import ProjectsSection from 'components/home/projects/Projects';
+import Head from 'next/head';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
-export default function Home({
-  heroContent,
-  projectsContent,
-  contactContent,
-  metadata,
-}: {
-  heroContent: heroContent;
-  projectsContent: projectsContent;
-  contactContent: contactContent;
-  metadata: metadata;
-}) {
+export default function Home() {
+  const { t } = useTranslation();
+
   return (
     <>
       <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:type" content={metadata.type} />
-        <meta property="og:image" content={metadata.image} />
+        <title>{t(['metadata.title'])}</title>
+        <meta name="description" content={t(['metadata.description'])} />
+        <meta property="og:title" content={t(['metadata.title'])} />
+        <meta property="og:description" content={t(['metadata.description'])} />
+        <meta property="og:type" content={t(['metadata.type'])} />
       </Head>
       <main>
-        <Hero content={heroContent} />
-        <ProjectsSection content={projectsContent} />
-        <ContactSection content={contactContent} />
+        <HeroSection />
+        <ProjectsSection />
+        <ContactSection />
       </main>
     </>
   );
 }
 
 export const getStaticProps = async ({ locale }: { locale: string }) => {
-  const metadata = (await import(`/data/${locale}/global.json`)).default
-    .metadata;
-  const heroContent = (await import(`/data/${locale}/hero.json`)).default;
-  const projectsContent = (await import(`/data/${locale}/projects.json`))
-    .default;
-  const contactContent = (await import(`/data/${locale}/contact.json`)).default;
+  const translations = await serverSideTranslations(locale, ['global', 'hero', 'projects', 'contact']);
 
   return {
     props: {
-      heroContent,
-      projectsContent,
-      contactContent,
-      metadata,
+      ...translations,
     },
-    revalidate: 30,
+    revalidate: 60,
   };
 };

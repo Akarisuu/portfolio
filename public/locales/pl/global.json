@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "title": "Paweł Majewski - Portfolio",
+    "description": "Frontend Developer, uwielbiający programistykę, ciągle poszerzając swoje umiejętności w optymalizacji i pisaniu lepszego kodu.",
+    "type": "website"
+  },
+  "navbar": [
+    {
+      "label": "Start",
+      "href": "/#home"
+    },
+    {
+      "label": "Projekty",
+      "href": "/#projects"
+    },
+    {
+      "label": "Kontakt",
+      "href": "/#contact"
+    }
+  ]
+}
