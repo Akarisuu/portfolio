@@ -9,11 +9,11 @@ export default function Navbar() {
   const router = useRouter();
   const { t } = useTranslation();
 
-  const navbarItems = t(['navbar'], { returnObjects: true }) ?? [];
+  const navbarItems = t(['navbar'], { returnObjects: true }) || [];
 
   return (
     <nav className=" fixed top-0 z-50 flex w-full justify-center bg-gradient-to-b from-primary-bg to-transparent px-mobile py-5 font-header text-lg font-bold xl:justify-start xl:px-[10%] xl:py-7">
-      {navbarItems.map(({ label, href }, index) => {
+      {navbarItems?.map(({ label, href }, index) => {
         return (
           <Link href={href} passHref scroll={false} key={index}>
             <a
