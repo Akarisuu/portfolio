@@ -3,6 +3,7 @@ import LinkIcon from 'public/icons/link.svg';
 import { useTranslation } from 'next-i18next';
 import { ProjectProps } from './Project.types';
 import LinkedProjectTitle from '../linkedProjectTitle/LinkedProjectTitle';
+import { Fragment } from 'react';
 
 export default function Project({ content, isVisible, id }: ProjectProps) {
   const { t } = useTranslation('projects');
@@ -37,10 +38,10 @@ export default function Project({ content, isVisible, id }: ProjectProps) {
         </p>
         <div className="mt-4 flex flex-wrap gap-4 text-xs font-light md:text-sm">
           {technologies.map((el, i) => (
-            <>
-              <span key={i}>{el}</span>
+            <Fragment key={i}>
+              <span>{el}</span>
               {i !== technologies.length - 1 && <span className="text-primary-text">|</span>}
-            </>
+            </Fragment>
           ))}
         </div>
       </div>
